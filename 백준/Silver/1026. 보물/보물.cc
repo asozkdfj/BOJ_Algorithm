@@ -10,12 +10,7 @@ int b[51];
 int ind[51];
 int answer[51];
 priority_queue<int> pq;
-bool cmp(const int& a, const int& b) {
-    if (a == b) {
-        return false;
-    }
-    return a < b;
-}
+
 int main() {
     cin >> n;
     for (int i = 0; i < n; i++) { cin >> a[i]; }
@@ -35,7 +30,7 @@ int main() {
         }
     }
 
-    sort(a, a + n, cmp);
+    sort(a, a + n);
     //s계산
     int ans = 0;
     for (int i = 0; i < n; i++) {
